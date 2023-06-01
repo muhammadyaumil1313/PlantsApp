@@ -83,6 +83,23 @@ object PlantData {
                     "Bedanya, tanaman ini memiliki daun lebar berbentuk jantung warnanya hijau tua " +
                     "dengan urat hijau muda keputih-putihan. Pada daun terdapat guratan uratnya yang " +
                     "menonjol berwarna putih seperti kristal maka dinamai crystallinum."
+        ),
+        Plant(
+            id=9,
+            name = "Rotan Inun",
+            image = "https://github.com/muhammadyaumil1313/PlantsApp/blob/master/app/src/main/res/drawable/rotan_inun.jpg?raw=true",
+            body = "Calamus scabridulus Becc atau rotan inun. Jenis dari tumbuhan palem-paleman yang" +
+                    " sangat khas dan memiliki rotan berumpun dengan panjang hingga 20 m. Tumbuhan" +
+                    " langka ini hanya dapat ditemukan di Bangka Belitung dan sekitarnya. Jenis " +
+                    "tumbuhan ini sangat langka untuk ditemukan karena hutan alami sudah banyak" +
+                    " diubah menjadi pemukiman atau industri."
+        ),
+        Plant(
+            id=10,
+            name = "Kuping Gajah",
+            image = "https://github.com/muhammadyaumil1313/PlantsApp/blob/master/app/src/main/res/drawable/kuping_gajah.jpg?raw=true",
+            body = "Dipterocarpus hasseltii Blume atau keruing bunga. Dalam bahasa Jawa sering juga dinamakan pelahlar.Jenis dari tumbuhan jenis meranti-merantian yang terancam punah dengan status genting karena populasi yang semakin menciut. Penyebabnya pembalakan liar dan alih fungsi lahan.\n" +
+                    "Hal ini tidak lain karena eksploitasi secara berlebihan daripada kayu yang terdapat di keruing bunga. Saat ini, keruing bunga dapat ditemukan di beberapa daerah di Jawa, Bali, Sumbawa, dan Kalimantan."
         )
     )
 }
