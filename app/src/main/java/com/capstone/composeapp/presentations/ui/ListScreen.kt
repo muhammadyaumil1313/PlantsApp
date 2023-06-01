@@ -24,7 +24,7 @@ import com.capstone.composeapp.presentations.ui.viewmodel.SharedViewModel
 fun ListScreen(navHostController: NavHostController,sharedViewModel: SharedViewModel){
     Scaffold(
         modifier=Modifier.fillMaxSize(),
-        topBar = { TopBar() }
+        topBar = { TopBar(navHostController) }
     ) {paddingValues ->
         Column(modifier=Modifier.padding(paddingValues)) {
             val plantData = remember{PlantData.plants}

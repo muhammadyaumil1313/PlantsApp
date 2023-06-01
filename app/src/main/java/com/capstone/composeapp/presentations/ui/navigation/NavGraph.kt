@@ -14,6 +14,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.capstone.composeapp.domain.model.Plant
+import com.capstone.composeapp.presentations.ui.AboutScreen
 import com.capstone.composeapp.presentations.ui.DetailScreen
 import com.capstone.composeapp.presentations.ui.ListScreen
 import com.capstone.composeapp.presentations.ui.viewmodel.SharedViewModel
@@ -35,6 +36,11 @@ fun NavGraph(navController: NavHostController){
                 Log.d("DetailScreen","${result?.name}")
             }
             DetailScreen(sharedViewModel = sharedViewModel)
+        }
+        composable(
+            route = Screens.AboutScreen.route
+        ){
+            AboutScreen()
         }
     }
 }
