@@ -16,12 +16,16 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.capstone.composeapp.data.local.PlantData
 import com.capstone.composeapp.presentations.ui.components.PlantItem
+import com.capstone.composeapp.presentations.ui.components.TopBar
 import com.capstone.composeapp.presentations.ui.viewmodel.SharedViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListScreen(navHostController: NavHostController,sharedViewModel: SharedViewModel){
-    Scaffold(modifier=Modifier.fillMaxSize()) {paddingValues ->
+    Scaffold(
+        modifier=Modifier.fillMaxSize(),
+        topBar = { TopBar() }
+    ) {paddingValues ->
         Column(modifier=Modifier.padding(paddingValues)) {
             val plantData = remember{PlantData.plants}
             LazyColumn(modifier=Modifier.padding(paddingValues)){
