@@ -3,6 +3,7 @@ package com.capstone.composeapp.presentations.ui
 import android.util.LayoutDirection
 import android.util.Log
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.calculateStartPadding
@@ -67,6 +68,31 @@ fun DetailScreen(sharedViewModel: SharedViewModel){
                 textAlign = TextAlign.Justify,
                 lineHeight = 1.5.em
             )
+            Row(modifier=Modifier.padding(start = 10.dp)){
+                Text(text = "Famili : ",fontWeight = FontWeight.Medium)
+                plant.value!!.famili?.let {text->
+                    Text(
+                        text = text,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Normal,
+                        textAlign = TextAlign.Justify,
+                        lineHeight = 1.5.em
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(10.dp))
+            Row(modifier=Modifier.padding(start = 10.dp)){
+               Text(text = "Tempat Adaptasi : ", fontWeight = FontWeight.Medium)
+                plant.value!!.tempatAdaptasi?.let {text->
+                    Text(
+                        text = text,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Normal,
+                        textAlign = TextAlign.Justify,
+                        lineHeight = 1.5.em
+                    )
+                }
+            }
         }
     }
 }

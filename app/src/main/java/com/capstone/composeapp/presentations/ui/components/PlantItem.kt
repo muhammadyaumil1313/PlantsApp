@@ -30,6 +30,8 @@ fun PlantItem(
     name: String,
     image: String,
     description: String,
+    famili:String,
+    tempatAdaptasi:String,
     navHostController: NavHostController,
     modifier: Modifier = Modifier,
     sharedViewModel: SharedViewModel
@@ -38,7 +40,14 @@ fun PlantItem(
         modifier = modifier
             .fillMaxWidth()
             .clickable {
-                val plant = Plant(id = id, name = name, image = image, body = description)
+                val plant = Plant(
+                    id = id,
+                    name = name,
+                    image = image,
+                    body = description,
+                    famili = famili,
+                    tempatAdaptasi = tempatAdaptasi
+                )
                 sharedViewModel.setPlantDetail(plant)
                 navHostController.navigate(Screens.DetailScreen.route)
             }

@@ -30,14 +30,18 @@ fun ListScreen(navHostController: NavHostController,sharedViewModel: SharedViewM
             val plantData = remember{PlantData.plants}
             LazyColumn(modifier=Modifier.padding(paddingValues)){
                 itemsIndexed(plantData){ _,plant->
-                    PlantItem(
-                        id=plant.id,
-                        name = plant.name,
-                        image = plant.image.toString(),
-                        description = plant.body,
-                        navHostController = navHostController,
-                        sharedViewModel=sharedViewModel
-                    )
+                    if(plant.famili != null && plant.tempatAdaptasi != null){
+                        PlantItem(
+                            id=plant.id,
+                            name = plant.name,
+                            image = plant.image.toString(),
+                            description = plant.body,
+                            famili= plant.famili,
+                            tempatAdaptasi=plant.tempatAdaptasi,
+                            navHostController = navHostController,
+                            sharedViewModel=sharedViewModel
+                        )
+                    }
                 }
             }
         }

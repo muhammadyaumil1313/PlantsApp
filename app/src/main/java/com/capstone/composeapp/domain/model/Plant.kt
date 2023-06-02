@@ -7,6 +7,8 @@ import kotlinx.parcelize.Parcelize
 data class Plant(
     val id:Int,
     val name:String,
+    val famili:String?=null,
+    val tempatAdaptasi:String?=null,
     val image:String?="https://raw.githubusercontent.com/muhammadyaumil1313/PlantsApp/master/app/src/main/res/drawable/baseline_broken_image_24.xml",
     val body:String
 ):Parcelable
